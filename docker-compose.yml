@@ -1,0 +1,12 @@
+version: "3.8"
+services: 
+  OnionStructure:
+    build: .
+    ports:
+      - "5000:80"
+    environment:
+      - settings__AWS__AWSProfileName='default'
+      - settings__AWS__AWSAccessKey='some'
+      - settings__AWS__AWSSecretKey='some'
+      - ConnectionStrings__DBConnectionString='Data Source={your connection string}'
+      - JWTToken__Secret='I3ctURyOcXAiC1zt'
